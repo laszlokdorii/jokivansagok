@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete, Render } from '@nestjs/common';
 import { JokivansagokService } from './jokivansagok.service';
 import { CreateJokivansagokDto } from './dto/create-jokivansagok.dto';
 import { UpdateJokivansagokDto } from './dto/update-jokivansagok.dto';
@@ -13,8 +13,11 @@ export class JokivansagokController {
   }
 
   @Get()
-  findAll() {
-    return this.jokivansagokService.findAll();
+  @Render("index")
+  async findAll() {
+    const data= await this.jokivansagokService.findAll();
+    console.log(data);
+    return {data};
   }
 
   @Get(':id')
