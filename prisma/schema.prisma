@@ -16,6 +16,6 @@ model kivansagok{
   id Int @id @default(autoincrement())
   kivanonev String
   tartalom String
-  kivansagido DateTime
+  kivansagido DateTime @updatedAt
  
 }

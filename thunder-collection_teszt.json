@@ -1,0 +1,81 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "teszt",
+    "collectionId": "e27aba86-a0b5-4dce-83c8-23d685a5415e",
+    "dateExported": "2025-01-03T20:12:53.471Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "9b68c357-0493-41ff-bb1c-6d62b3f80509",
+            "colId": "e27aba86-a0b5-4dce-83c8-23d685a5415e",
+            "containerId": "",
+            "name": "http://localhost:3000/jokivansagok",
+            "url": "http://localhost:3000/jokivansagok",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2025-01-03T19:47:34.194Z",
+            "modified": "2025-01-03T19:47:34.194Z",
+            "headers": []
+        },
+        {
+            "_id": "afa2d2d9-1f79-4100-b1d0-97afc03fe8f7",
+            "colId": "e27aba86-a0b5-4dce-83c8-23d685a5415e",
+            "containerId": "",
+            "name": "get/id",
+            "url": "http://localhost:3000/jokivansagok/3",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2025-01-03T19:48:26.879Z",
+            "modified": "2025-01-03T19:48:26.879Z",
+            "headers": []
+        },
+        {
+            "_id": "413b8bd7-6414-40e8-8435-7fdff45d2d29",
+            "colId": "e27aba86-a0b5-4dce-83c8-23d685a5415e",
+            "containerId": "",
+            "name": "delete",
+            "url": "http://localhost:3000/jokivansagok/5",
+            "method": "DELETE",
+            "sortNum": 30000,
+            "created": "2025-01-03T19:50:25.244Z",
+            "modified": "2025-01-03T19:50:25.244Z",
+            "headers": []
+        },
+        {
+            "_id": "0ac86b6c-0855-44b5-9b9d-3b6e96ce146e",
+            "colId": "e27aba86-a0b5-4dce-83c8-23d685a5415e",
+            "containerId": "",
+            "name": "post",
+            "url": "http://localhost:3000/jokivansagok",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2025-01-03T20:09:13.713Z",
+            "modified": "2025-01-03T20:09:13.713Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"kivanonev\": \"Terry Willms\",\n  \"tartalom\": \"Explicabo confido tonsor trado traho ager acceptus occaecati deficio. Coniuratio volup tot amplexus \"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "704a0dce-237c-48da-a8fa-9299db500664",
+            "colId": "e27aba86-a0b5-4dce-83c8-23d685a5415e",
+            "containerId": "",
+            "name": "patch",
+            "url": "http://localhost:3000/jokivansagok/6",
+            "method": "PATCH",
+            "sortNum": 50000,
+            "created": "2025-01-03T20:12:20.200Z",
+            "modified": "2025-01-03T20:12:20.200Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"kivanonev\": \"Terry Willms\",\n  \"tartalom\": \"Frissített\"\n}",
+                "form": []
+            }
+        }
+    ],
+    "ref": "7A_55YT7M4PbJAU5RDrb_PpQCsKh9AjQjS6BOqYwQs00XSjlrvsYMMKKQv7i6Q0MsL9fzuzqouT9_z1NtgFtyQ"
+}

@@ -11,7 +11,10 @@ export class JokivansagokService {
   }
   async create(createJokivansagokDto: CreateJokivansagokDto) {
     return await this.db.kivansagok.create({
-      data: createJokivansagokDto
+      data: {
+        ...createJokivansagokDto, 
+        kivansagido: new Date(),
+      },
     });
   }
 
@@ -33,7 +36,10 @@ export class JokivansagokService {
       where: {
         id:id
       },
-      data: updateJokivansagokDto
+      data: {
+        ...updateJokivansagokDto, 
+        kivansagido: new Date()
+      }
     });
   }
 

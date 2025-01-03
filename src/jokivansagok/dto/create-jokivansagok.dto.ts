@@ -6,7 +6,5 @@ export class CreateJokivansagokDto {
     @IsString()
     @IsNotEmpty()
     tartalom: string;
-    @IsNotEmpty()
-    @IsDate()
-    kivansagido: Date;
+    kivansagido?: Date;
 }
