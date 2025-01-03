@@ -1,26 +1,47 @@
 import { Injectable } from '@nestjs/common';
 import { CreateJokivansagokDto } from './dto/create-jokivansagok.dto';
 import { UpdateJokivansagokDto } from './dto/update-jokivansagok.dto';
+import { PrismaService } from 'src/prisma.service';
 
 @Injectable()
 export class JokivansagokService {
-  create(createJokivansagokDto: CreateJokivansagokDto) {
-    return 'This action adds a new jokivansagok';
+  db: PrismaService
+  constructor(db:PrismaService){
+    this.db=db;
+  }
+  async create(createJokivansagokDto: CreateJokivansagokDto) {
+    return await this.db.kivansagok.create({
+      data: createJokivansagokDto
+    });
   }
 
-  findAll() {
-    return `This action returns all jokivansagok`;
+  async findAll() {
+    return await this.db.kivansagok.findMany();
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} jokivansagok`;
+  async findOne(id: number) {
+    const kivansag = await this.db.kivansagok.findUnique({
+      where: {
+        id:id
+      }
+    });
+    return kivansag;
   }
 
-  update(id: number, updateJokivansagokDto: UpdateJokivansagokDto) {
-    return `This action updates a #${id} jokivansagok`;
+  async update(id: number, updateJokivansagokDto: UpdateJokivansagokDto) {
+    return await this.db.kivansagok.update({
+      where: {
+        id:id
+      },
+      data: updateJokivansagokDto
+    });
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} jokivansagok`;
+  async remove(id: number) {
+    return await this.db.kivansagok.delete({
+      where: {
+        id:id
+      }
+    });
   }
 }
