@@ -12,3 +12,10 @@ datasource db {
   provider = "mysql"
   url      = env("DATABASE_URL")
 }
+model kivansagok{
+  id Int @id @default(autoincrement())
+  kivanonev String
+  tartalom String
+  kivansagido DateTime
+ 
+}
