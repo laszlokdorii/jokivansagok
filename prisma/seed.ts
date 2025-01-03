@@ -12,9 +12,7 @@ async function main() {
                 tartalom: faker.lorem.paragraph().toString(),
                 kivansagido: new Date(),
             }
-        }),
-
-        
+        }) 
     };
 }
  
