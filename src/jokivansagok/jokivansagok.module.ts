@@ -4,6 +4,7 @@ import { JokivansagokController } from './jokivansagok.controller';
 import { PrismaService } from 'src/prisma.service';
 
 @Module({
+  exports: [JokivansagokService],
   controllers: [JokivansagokController],
   providers: [JokivansagokService, PrismaService],
 })
